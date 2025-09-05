@@ -1,0 +1,34 @@
+{
+  "version": "2.0",
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "[4.*, 5.0.0)"
+  },
+  "extensions": {
+    "eventHubs": {
+      "maxEventBatchSize": 100,
+      "batchCheckpointFrequency": 1,
+      "targetUnprocessedEventThreshold": 200,
+      "prefetchCount": 300,
+      "clientRetryOptions": {
+        "delay": "00:00:00.80",
+        "maxDelay": "00:00:01",
+        "maxRetries": 3,
+        "tryTimeout": "00:01:00"
+      },
+      "initialOffsetOptions": {
+        "type": "fromEnd"
+      }
+    }
+  },
+  "logging": {
+    "logLevel": {
+      "default": "Debug",
+      "Host.Results": "Debug",
+      "Function": "Debug",
+      "Host.Aggregator": "Debug",
+      "Microsoft.Azure.WebJobs": "Debug",
+      "Microsoft.Azure.EventHubs": "Debug"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+[versions] # Keep alphabetical sorting
+azure-functions-library = "3.1.0"
+azure-messaging-eventhubs = "5.21.0"
+kotlin = "2.2.10"
+spring-boot = "3.5.5"
+spring-function = "4.3.0"
+
+
+[libraries] # Keep alphabetical sorting
+azure-functions-java = { module = "com.microsoft.azure.functions:azure-functions-java-library", version.ref = "azure-functions-library" }
+azure-messaging-eventhubs = { module = "com.azure:azure-messaging-eventhubs", version.ref = "azure-messaging-eventhubs" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+spring-boot-dependencies = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "spring-boot" }
+spring-boot-starter-logging = { module = "org.springframework.boot:spring-boot-starter-logging", version.ref = "spring-boot" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "spring-boot" }
+spring-function-adapter = { module = "org.springframework.cloud:spring-cloud-function-adapter-azure", version.ref = "spring-function" }
