@@ -1,0 +1,14 @@
+logging:
+  level:
+    root: info
+
+spring:
+  main:
+    banner-mode: off
+  profiles:
+    active: ${APPLICATION_ENVIRONMENT:default}
+app:
+  azure:
+    eventhub:
+      connection-string: ${EHUB_CONNECTION:EHUB_CONNECTION}
+      event-hub-name: event-hub
